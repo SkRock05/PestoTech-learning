@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import React from "react";
+// import { Header } from "./App";
+// import { Update } from "./Update";
+// import { Unmount } from "./Unmount";
+// import { Hooks } from "./Component/Hooks";
+import { UseEffect, UseEffectExample } from "./Component/UseEffect/UseEffect";
+import { Car } from "./Component/UseEffect/UseEffect1";
+import { UseRef } from "./Component/UseRef/UseRef";
+import { UseRef1 } from "./Component/UseRef/UseRef1";
+import { UseRef2 } from "./Component/UseRef/UseRef2";
+import { UseReducer } from "./Component/UseReducer/UseReducer";
+import { CustomHook } from "./Component/CustomHooks/CustomHook1";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const rootEl = document.getElementById("root");
+const app = (
+  <div>
+    {/* <Header color="blue" /> */}
+    {/* <Update color="yellow" /> */}
+    {/* <Unmount /> */}
+    {/* <Hooks /> */}
+    {/* <UseEffectExample /> */}
+    {/* <Car /> */}
+    {/* <UseRef /> */}
+    {/* <UseRef1 /> */}
+    {/* <UseRef2 /> */}
+    {/* <UseReducer /> */}
+    <CustomHook />
+  </div>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(app, rootEl);
